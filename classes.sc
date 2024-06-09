@@ -11,7 +11,7 @@ Write {
 FDLine {
 
 	*ar {
-		arg in, delTime=0, freq=200, rq=20, mul=1, add=0;
+		arg in, delTime=0, freq=200, rq=4, mul=1, add=0;
 		var dline=DelTapRd.ar(in[0],in[1],delTime,4);
 		var filtered=BPF.ar(dline, freq, rq);
 		^(filtered*mul)+add
